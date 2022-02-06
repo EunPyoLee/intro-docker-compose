@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  web:
+    # build 'web' service image from the current dir(.)'s Dockerfile and use this image for the service
+    build: . 
+    ports:
+      - "5000:5000"
+    # use image from the public Docker Hub's Redis image
+  redis:
+    image: "redis:alpine"
